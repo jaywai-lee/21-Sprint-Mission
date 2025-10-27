@@ -1,0 +1,56 @@
+.banner {
+  background-color: #cfe5ff;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+  background-size: 55%;
+}
+
+#hero {
+  background-image: url(../images/home/hero-image.png);
+}
+
+#features {
+  padding-bottom: 138px;
+}
+
+#bottomBanner {
+  background-image: url(../images/home/bottom-banner-image.png);
+}
+
+#login_button {
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 23px;
+}
+
+.feature {
+  padding: 138px 0;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.feature:nth-child(2) {
+  text-align: right;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-tag {
+  color: #3692ff;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.feature-description {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 24px;
+}
