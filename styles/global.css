@@ -86,7 +86,7 @@ h1 {
 }
 
 .button:disabled {
-  background-color: 9ca3af;
+  background-color: #9ca3af;
   cursor: default;
   pointer-events: none;
 }
