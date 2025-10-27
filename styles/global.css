@@ -9,6 +9,14 @@ a {
   color: inherit;
 }
 
+button {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer
+}
+
 img {
   vertical-align: bottom;
 }
@@ -67,6 +75,20 @@ h1 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.button:hover {
+  background-color: #1967d6;
+}
+
+.button:focus {
+  background-color: #1251aa;
+}
+
+.button:disabled {
+  background-color: 9ca3af;
+  cursor: default;
+  pointer-events: none;
 }
 
 .pill-button {
