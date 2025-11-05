@@ -11,6 +11,17 @@
   --main-blue: #3692ff;
 }
 
+.login-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.panda-logo {
+  width: 396px;
+  height: 132px;
+}
+
 .login-page {
   width: 640px;
   margin: 60px auto;
@@ -20,10 +31,23 @@
   gap: 20px;
 }
 
+input,
+.login-button,
+.quick-login {
+  width: 640px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
 .quick-login {
   background-color: #e6f2ff;
   display: flex;
-  width: 640px;
   justify-content: space-between;
   align-items: center;
   height: 74px;
@@ -33,16 +57,14 @@
 
 input {
   background-color: var(--gray-100);
-  border-radius: 8px;
+  border-radius: 12px;
   border: none;
   padding: 15px 25px;
   margin: 0;
-  width: 640px;
 }
 
 .login-button {
   padding: 16px 124px;
-  width: 640px;
   border-radius: 999px;
   font-size: 20px;
   font-weight: 600;
@@ -58,6 +80,14 @@ input {
   font-weight: 700;
   color: var(--gray-800);
   margin-bottom: 15px;
+}
+
+.login-button {
+  background-color: var(--gray-400);
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .quick-login-content {
@@ -89,13 +119,65 @@ input {
 
 .eyes {
   position: absolute;
-  top: 35px;
+  top: 36px;
   bottom: 0;
-  right: 10px;
+  right: 30px;
   margin: auto;
-  height: 30px;
-  font-size: 18px;
+  height: 18px;
+  font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 0 16px;
+  }
+
+  .panda-logo {
+    width: 198px;
+    height: 66px;
+  }
+
+  input,
+  .input-email,
+  .input-password,
+  .login-button,
+  .quick-login,
+  .login-page,
+  .login-button-wrap,
+  .input-nickname {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .quick-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-password {
+    position: relative;
+  }
+
+  .eyes {
+    position: absolute;
+    top: 36px;
+    bottom: 0px;
+    right: 30px;
+    margin: auto;
+    height: 18px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
 }
