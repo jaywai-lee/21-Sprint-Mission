@@ -16,7 +16,7 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/login_signup.css" />
+    <link rel="stylesheet" href="./styles/auth.css" />
   </head>
 
   <body>
@@ -34,35 +34,59 @@
         </a>
       </div>
 
-      <div class="input-email">
-        <p class="input">이메일</p>
-        <input type="email" placeholder="이메일을 입력해주세요" />
-      </div>
-
-      <div class="input-nickname">
-        <p class="input">닉네임</p>
-        <input type="text" placeholder="닉네임을 입력해주세요" />
-      </div>
-
-      <div class="input-password">
-        <p class="input">비밀번호</p>
-        <input type="password" placeholder="비밀번호를 입력해주세요" />
-        <div class="eyes">
-          <i class="fa fa-eye-slash fa-lg"></i>
+      <form class="login-form" action="#" method="post">
+        <div class="input-email">
+          <label class="input">이메일</label>
+          <input
+            name="email"
+            type="email"
+            placeholder="이메일을 입력해주세요"
+            required
+          />
         </div>
-      </div>
 
-      <div class="input-password">
-        <p class="input">비밀번호 확인</p>
-        <input type="text" placeholder="비밀번호를 다시 한 번 입력해주세요" />
-        <div class="eyes">
-          <i class="fa fa-eye fa-lg"></i>
+        <div class="input-nickname">
+          <label class="input">닉네임</label>
+          <input
+            name="nickname"
+            type="text"
+            placeholder="닉네임을 입력해주세요"
+            required
+          />
         </div>
-      </div>
 
-      <div>
-        <a href="./signup.html" class="login-button">회원가입</a>
-      </div>
+        <div class="input-password">
+          <label class="input">비밀번호</label>
+          <input
+            name="password"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+            required
+          />
+          <button type="button" class="eyes" tabindex="-1">
+            <i class="fa fa-eye-slash fa-lg"></i>
+          </button>
+          <div class="error-wrapper"></div>
+        </div>
+
+        <div class="input-password-repeat">
+          <label class="input">비밀번호 확인</label>
+          <input
+            name="passwordConfirm"
+            type="password"
+            placeholder="비밀번호를 다시 한 번 입력해주세요"
+            required
+          />
+          <button type="button" class="eyes" tabindex="-1">
+            <i class="fa fa-eye-slash fa-lg"></i>
+          </button>
+          <div class="error-wrapper"></div>
+        </div>
+
+        <div class="signup-button-wrap">
+          <button type="submit" class="signup-button">회원가입</button>
+        </div>
+      </form>
 
       <div class="quick-login">
         <p class="quick-login-content">간편 로그인하기</p>
@@ -93,5 +117,6 @@
         <a href="./login.html" class="signup-request">로그인</a>
       </div>
     </section>
+    <script src="./features/auth.js"></script>
   </body>
 </html>

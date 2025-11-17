@@ -25,12 +25,18 @@
   <body>
     <header>
       <a href="./index.html">
-        <img
-          class="pandamarket-logo"
-          alt="판다마켓 로고"
-          src="images/logo/panda-market-logo.png"
-          width="153"
-        />
+        <picture width="103">
+          <source
+            media="(max-width: 767px)"
+            srcset="images/logo/panda-market-logo-mobile.png"
+          />
+          <img
+            class="pandamarket-logo"
+            alt="판다마켓 로고"
+            src="images/logo/panda-market-logo.png"
+            width="153"
+          />
+        </picture>
       </a>
       <a id="login_button" class="login button" href="./login.html">로그인</a>
     </header>
@@ -38,10 +44,7 @@
     <main>
       <section id="hero" class="banner">
         <div class="wrapper">
-          <h1 class="banner-title">
-            일상의 모든 물건을<br class="onlyPC" />
-            거래해 보세요
-          </h1>
+          <h1 class="banner-title">일상의 모든 물건을 거래해 보세요</h1>
           <a class="button pill-button" href="./item.html">구경하러 가기</a>
         </div>
       </section>

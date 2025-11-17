@@ -16,7 +16,7 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/login_signup.css" />
+    <link rel="stylesheet" href="./styles/auth.css" />
   </head>
 
   <body>
@@ -33,22 +33,35 @@
         </a>
       </div>
 
-      <div class="input-email">
-        <p class="input">이메일</p>
-        <input type="email" placeholder="이메일을 입력해주세요" />
-      </div>
-
-      <div class="input-password">
-        <p class="input">비밀번호</p>
-        <input type="password" placeholder="비밀번호를 입력해주세요" />
-        <div class="eyes">
-          <i class="fa fa-eye-slash fa-lg"></i>
+      <form class="login-form" method="post">
+        <div class="input-email">
+          <label class="input">이메일</label>
+          <input
+            name="email"
+            type="email"
+            placeholder="이메일을 입력해주세요"
+            required
+          />
         </div>
-      </div>
 
-      <div class="login-button-wrap">
-        <a href="./login.html" class="login-button">로그인</a>
-      </div>
+        <div class="input-password">
+          <label class="input">비밀번호</label>
+          <input
+            name="password"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+            required
+          />
+          <button type="button" class="eyes" tabindex="-1">
+            <i class="fa fa-eye-slash fa-lg"></i>
+          </button>
+          <div class="error-wrapper"></div>
+        </div>
+
+        <div class="login-button-wrap">
+          <button type="submit" class="login-button">로그인</button>
+        </div>
+      </form>
 
       <div class="quick-login">
         <p class="quick-login-content">간편 로그인하기</p>
@@ -79,5 +92,6 @@
         <a href="./signup.html" class="signup-request">회원가입</a>
       </div>
     </section>
+    <script src="./features/auth.js"></script>
   </body>
 </html>
