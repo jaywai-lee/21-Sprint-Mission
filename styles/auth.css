@@ -136,15 +136,17 @@ label {
 .nn-error-msg {
   color: red;
   display: block;
-  margin-top: 10px;
-  margin-left: 15px;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-left: 16px;
 }
 
 .pw-error-msg {
   color: red;
   display: block;
-  margin-left: 15px;
-  margin-top: 10px;
+  font-size: 14px;
+  margin-left: 16px;
+  margin-top: 8px;
 }
 
 .error-border {

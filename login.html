@@ -35,27 +35,30 @@
 
       <form class="login-form" method="post">
         <div class="input-email">
-          <label class="input">이메일</label>
+          <label class="input" for="email-for-login">이메일</label>
           <input
             name="email"
             type="email"
+            id="email-for-login"
             placeholder="이메일을 입력해주세요"
             required
           />
+          <div class="id-error-wrapper"></div>
         </div>
 
         <div class="input-password">
-          <label class="input">비밀번호</label>
+          <label class="input" for="password-for-login">비밀번호</label>
           <input
             name="password"
             type="password"
+            id="password-for-login"
             placeholder="비밀번호를 입력해주세요"
             required
           />
           <button type="button" class="eyes" tabindex="-1">
             <i class="fa fa-eye-slash fa-lg"></i>
           </button>
-          <div class="error-wrapper"></div>
+          <div class="pw-error-wrapper"></div>
         </div>
 
         <div class="login-button-wrap">
@@ -92,6 +95,6 @@
         <a href="./signup.html" class="signup-request">회원가입</a>
       </div>
     </section>
-    <script src="./features/auth.js"></script>
+    <script type="module" src="./features/main.js"></script>
   </body>
 </html>
