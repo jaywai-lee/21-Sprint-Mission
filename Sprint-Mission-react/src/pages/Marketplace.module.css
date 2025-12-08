@@ -1,0 +1,134 @@
+.marketPage {
+  background-color: #fcfcfc;
+}
+
+.bestProducts,
+.allProducts {
+  width: 100%;
+  max-width: 1200px;
+  margin: 24px auto 40px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--color-gray-900);
+  white-space: nowrap;
+  line-height: 58px;
+  display: flex;
+  align-items: center;
+}
+
+.bestProducts .sectionTitle {
+  margin-top: 94px;
+}
+
+.allProducts .sectionTitle {
+  margin-bottom: 0;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.addButton {
+  background-color: #3692ff;
+  color: #f3f4f6;
+  border: none;
+  padding: 12px 23px;
+  width: 133px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .bestProducts,
+  .allProducts {
+    max-width: 696px;
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .allProducts .sectionTitle {
+    margin: 0;
+  }
+}
+
+@media (max-width: 743px) {
+  .bestProducts,
+  .allProducts {
+    margin: 0 auto;
+    max-width: 344px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+  }
+
+  .toolbar .sectionTitle {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .toolbarRight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+  }
+
+  .toolbarRight .addButton {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 16px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    transform: translateY(-10px);
+    padding: 12px 16px;
+    white-space: nowrap;
+  }
+  .bestProducts .sectionTitle {
+    margin-top: 87px;
+  }
+
+  .allProducts .sectionTitle {
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+}

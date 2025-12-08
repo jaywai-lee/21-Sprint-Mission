@@ -1,0 +1,105 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px 200px;
+  border-bottom: 1px solid #dfdfdf;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  height: 51px;
+  cursor: pointer;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-gray-600);
+  padding: 21px 15px;
+  height: 70px;
+  border-radius: 8px;
+}
+
+.active {
+  background-color: var(--color-primary-100);
+  color: #fff;
+}
+
+.user {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    max-width: 100%;
+    padding: 15px 24px;
+  }
+
+  .left {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 743px) {
+  .nav {
+    max-width: 100%;
+    padding: 15px 16px;
+  }
+
+  .logo {
+    width: 81px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .menu {
+    gap: 8px;
+  }
+
+  .btn {
+    font-size: 16px;
+    white-space: nowrap;
+    padding: 25px 0;
+  }
+
+  .btn:first-child {
+    width: 70px;
+  }
+
+  .btn:last-child {
+    width: 56px;
+  }
+
+  .left {
+    gap: 8px;
+  }
+}
