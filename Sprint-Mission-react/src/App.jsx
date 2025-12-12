@@ -1,14 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Nav from "./components/Nav";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Marketplace from "./pages/Marketplace";
 import AddItem from "./pages/AddItem";
 
 function App() {
   return (
     <BrowserRouter>
-      <Nav />
       <Routes>
         <Route path="/items" element={<Marketplace />} />
+        <Route path="/" element={<Navigate to="/items" replace />} />
         <Route path="/additem" element={<AddItem />} />
       </Routes>
     </BrowserRouter>

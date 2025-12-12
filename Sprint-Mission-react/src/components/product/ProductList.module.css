@@ -37,3 +37,34 @@
     gap: 8px;
   }
 }
+
+.allImage {
+  width: 221px;
+  height: 221px;
+}
+
+@media (max-width: 743px) {
+  .allImage {
+    width: 168px;
+    height: 168px;
+  }
+}
+
+.bestImage {
+  width: 282px;
+  height: 282px;
+}
+
+@media (max-width: 1024px) {
+  .bestImage {
+    width: 343px;
+    height: 343px;
+  }
+}
+
+@media (max-width: 743px) {
+  .bestImage {
+    width: 343px;
+    height: 343px;
+  }
+}

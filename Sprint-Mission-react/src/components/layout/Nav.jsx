@@ -1,8 +1,9 @@
 import { useState } from "react";
-import logoImg from "../assets/logo.png";
-import logoMobile from "../assets/logo_mobile.png";
-import userImg from "../assets/user.png";
+import logoImg from "../../assets/logo.png";
+import logoMobile from "../../assets/logo_mobile.png";
+import userImg from "../../assets/user.png";
 import styles from "./Nav.module.css";
+import Button from "../common/Button";
 
 function Nav() {
   const [active, setActive] = useState("market");
@@ -15,22 +16,16 @@ function Nav() {
           <img className={styles.logo} src={logoImg} alt="logo" />
         </picture>
         <div className={styles.menu}>
-          <button
-            className={`${styles.btn} ${
-              active === "board" ? styles.active : ""
-            }`}
+          <Button
+            text="자유게시판"
             onClick={() => setActive("board")}
-          >
-            자유게시판
-          </button>
-          <button
-            className={`${styles.btn} ${
-              active === "market" ? styles.active : ""
-            }`}
+            variant={active === "board" ? "navActive" : "nav"}
+          ></Button>
+          <Button
+            text="중고마켓"
             onClick={() => setActive("market")}
-          >
-            중고마켓
-          </button>
+            variant={active === "market" ? "navActive" : "nav"}
+          ></Button>
         </div>
       </div>
       <div className={styles.right}>

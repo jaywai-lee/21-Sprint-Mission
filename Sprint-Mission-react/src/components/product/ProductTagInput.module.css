@@ -1,0 +1,53 @@
+.tags {
+  display: flex;
+  flex-direction: column;
+}
+
+.tags label {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-gray-800);
+  margin-bottom: 16px;
+  margin-top: 4px;
+}
+
+.tagInput {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: var(--color-gray-800);
+  background-color: var(--color-gray-100);
+}
+
+.tagInput::placeholder {
+  color: var(--color-gray-400);
+  font-weight: 400;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--color-gray-100);
+  border-radius: 26px;
+  padding: 6px 12px 6px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-gray-800);
+}
+
+.tag img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

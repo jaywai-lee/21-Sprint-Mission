@@ -15,16 +15,6 @@
   cursor: pointer;
 }
 
-.allCard .image {
-  width: 221px;
-  height: 221px;
-}
-
-.bestCard .image {
-  width: 282px;
-  height: 282px;
-}
-
 .name {
   font-size: 14px;
   font-weight: 500;
@@ -57,24 +47,17 @@
   display: block;
 }
 
-@media (max-width: 1024px) {
-  .bestCard .image {
-    width: 343px;
-    height: 343px;
-  }
-}
-
 @media (max-width: 743px) {
   .card {
-    margin-bottom: 40px;
-  }
-  .bestCard .image {
-    width: 343px;
-    height: 343px;
+    min-height: 264px;
+    margin-bottom: 32px;
   }
 
-  .allCard .image {
-    width: 168px;
-    height: 168px;
+  .card:nth-child(3) {
+    margin-bottom: 0;
+  }
+
+  .card:nth-child(4) {
+    margin-bottom: 0;
   }
 }

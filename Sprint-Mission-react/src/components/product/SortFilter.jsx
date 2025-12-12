@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./SortFilter.module.css";
-import arrowDownImg from "../assets/arrow_down.png";
-import sortImg from "../assets/sort.png";
+import arrowDownImg from "../../assets/arrow_down.png";
+import sortImg from "../../assets/sort.png";
 
 function SortFilter({ orderBy, setOrderBy }) {
   const [open, setOpen] = useState(false);

@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-gray-800);
+}
+
+.imageBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.uploadBox {
+  width: 282px;
+  height: 282px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.input {
+  display: none;
+}
+
+.placeholder {
+  width: 282px;
+  height: 282px;
+}
+
+.text {
+  font-size: 14px;
+  color: var(--color-gray-600);
+}
+
+@media (max-width: 1024px) {
+  .uploadBox {
+    width: 168px;
+    height: 168px;
+  }
+}

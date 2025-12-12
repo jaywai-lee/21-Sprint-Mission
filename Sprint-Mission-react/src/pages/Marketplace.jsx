@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import ProductList from "../components/ProductList";
-import Pagination from "../components/Pagination";
-import SearchBar from "../components/SearchBar";
-import SortFilter from "../components/SortFilter";
+import ProductList from "../components/product/ProductList";
+import Pagination from "../components/layout/Pagination";
+import SearchBar from "../components/product/SearchBar";
+import SortFilter from "../components/product/SortFilter";
 import { fetchProducts, fetchBestProducts } from "../api/productAPI";
 import { useEffect, useState } from "react";
 import styles from "./Marketplace.module.css";
+import Nav from "../components/layout/Nav";
+import Button from "../components/common/Button";
 
 function Marketplace() {
   const [products, setProducts] = useState([]);
@@ -56,6 +58,7 @@ function Marketplace() {
 
   return (
     <div className={styles.marketPage}>
+      <Nav />
       <section className={styles.bestProducts}>
         <h2 className={styles.sectionTitle}>베스트 상품</h2>
         <ProductList
@@ -71,12 +74,12 @@ function Marketplace() {
           <h2 className={styles.sectionTitle}>전체 상품</h2>
           <div className={styles.toolbarRight}>
             <SearchBar onSearch={setSearch} />
-            <button
-              className={styles.addButton}
+            <Button
+              text="상품 등록하기"
+              variant="marketAdd"
               onClick={() => navigate("/additem")}
-            >
-              상품 등록하기
-            </button>
+              className={styles.addButtonPosition}
+            ></Button>
             <SortFilter orderBy={orderBy} setOrderBy={setOrderBy} />
           </div>
         </div>

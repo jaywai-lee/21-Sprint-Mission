@@ -34,23 +34,6 @@
   align-items: center;
 }
 
-.btn {
-  background-color: inherit;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--color-gray-600);
-  padding: 21px 15px;
-  height: 70px;
-  border-radius: 8px;
-}
-
-.active {
-  background-color: var(--color-primary-100);
-  color: #fff;
-}
-
 .user {
   width: 40px;
   height: 40px;
@@ -83,20 +66,6 @@
 
   .menu {
     gap: 8px;
-  }
-
-  .btn {
-    font-size: 16px;
-    white-space: nowrap;
-    padding: 25px 0;
-  }
-
-  .btn:first-child {
-    width: 70px;
-  }
-
-  .btn:last-child {
-    width: 56px;
   }
 
   .left {

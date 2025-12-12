@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./SearchBar.module.css";
-import searchImg from "../assets/vector.png";
+import searchImg from "../../assets/vector.png";
 
 function SearchBar({ onSearch }) {
   const [keyword, setKeyword] = useState("");
