@@ -101,9 +101,14 @@
 .cancel {
   background: transparent;
   border: none;
+  border-radius: 8px;
   line-height: 26px;
   width: 68px;
   cursor: pointer;
+}
+
+.cancel:hover {
+  background: var(--color-gray-100);
 }
 
 .submit {
