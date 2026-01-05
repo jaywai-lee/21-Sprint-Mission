@@ -1,0 +1,147 @@
+.commentBox {
+  margin-bottom: 64px;
+}
+
+.commentWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  position: relative;
+}
+
+.comment {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray-800);
+}
+
+.kebab {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.commentUser {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.commentUserInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.commentUserName {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-gray-600);
+}
+
+.commentUserDate {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-gray-400);
+}
+
+.dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 139px;
+  background-color: #fff;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.dropdown button {
+  width: 100%;
+  padding: 16px 0 12px 0;
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-gray-500);
+  cursor: pointer;
+}
+
+.dropdown button:hover {
+  background-color: var(--color-gray-100);
+}
+
+.editBox {
+  width: 100%;
+  border-bottom: none;
+}
+
+.editInput {
+  width: 100%;
+  min-height: 80px;
+  resize: none;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  background-color: var(--color-gray-100);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray-800);
+}
+
+.editActions {
+  display: flex;
+  gap: 4px;
+}
+
+.cancel {
+  background: transparent;
+  border: none;
+  line-height: 26px;
+  width: 68px;
+  cursor: pointer;
+}
+
+.submit {
+  background: var(--color-primary-100);
+  padding: 12px 23px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: var(--color-primary-200);
+}
+
+.editFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.commentItem {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+@media (max-width: 1023px) {
+  .commentBox {
+    margin-bottom: 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  .commentBox {
+    margin-bottom: 40px;
+  }
+
+  .commentWrapper {
+    padding-top: 40px;
+  }
+}

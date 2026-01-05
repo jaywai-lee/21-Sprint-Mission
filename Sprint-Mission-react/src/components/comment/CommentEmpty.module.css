@@ -1,0 +1,12 @@
+.emptyWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0 48px 0;
+}
+
+.emptyComment {
+  font-weight: 400;
+  color: var(--color-gray-400);
+}

@@ -3,6 +3,9 @@
   flex-direction: column;
   background: #fcfcfc;
   border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .image {

@@ -4,6 +4,7 @@ import logoMobile from "../../assets/logo_mobile.png";
 import userImg from "../../assets/user.png";
 import styles from "./Nav.module.css";
 import Button from "../common/Button";
+import { Link } from "react-router-dom";
 
 function Nav() {
   const [active, setActive] = useState("market");
@@ -11,10 +12,12 @@ function Nav() {
   return (
     <nav className={styles.nav}>
       <div className={styles.left}>
-        <picture className={styles.logoWrap}>
-          <source media="(max-width: 743px)" srcSet={logoMobile} />
-          <img className={styles.logo} src={logoImg} alt="logo" />
-        </picture>
+        <Link to="/items">
+          <picture className={styles.logoWrap}>
+            <source media="(max-width: 743px)" srcSet={logoMobile} />
+            <img className={styles.logo} src={logoImg} alt="logo" />
+          </picture>
+        </Link>
         <div className={styles.menu}>
           <Button
             text="자유게시판"

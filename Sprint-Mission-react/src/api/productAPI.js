@@ -17,3 +17,11 @@ export async function fetchBestProducts() {
   });
   return response.data;
 }
+
+export async function fetchProductById(productId) {
+  if (!productId) {
+    throw new Error("productId is required");
+  }
+  const response = await pandaAPIInstance.get(`/products/${productId}`);
+  return response.data;
+}
