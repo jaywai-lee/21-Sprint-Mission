@@ -1,0 +1,77 @@
+.loginForm {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  background-color: var(--color-gray-100);
+  border-radius: 12px;
+  border: none;
+  padding: 15px 25px;
+  margin: 16px 0 0 0;
+}
+
+.inputEmail {
+  margin-top: 16px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.loginButton {
+  width: 100%;
+  padding: 16px 124px;
+  border-radius: 999px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--color-gray-400);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputPassword {
+  position: relative;
+}
+
+.eyes {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  transform: none;
+  background: none;
+  margin: auto;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.errorMsg {
+  color: red;
+  display: block;
+  font-size: 14px;
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+.errorBorder {
+  border: 1px solid red;
+}
+
+.active {
+  background-color: var(--color-primary-100);
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .inputEmail {
+    margin-top: 0;
+  }
+}

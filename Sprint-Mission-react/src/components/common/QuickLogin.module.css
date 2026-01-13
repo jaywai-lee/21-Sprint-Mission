@@ -1,0 +1,26 @@
+.quickLogin {
+  width: 100%;
+  background-color: #e6f2ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 74px;
+  padding: 0 30px;
+  border-radius: 8px;
+}
+
+.quickLoginContent {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-gray-800);
+  line-height: 26px;
+}
+
+.img {
+  width: 42px;
+}
+
+.social {
+  display: flex;
+  gap: 16px;
+}

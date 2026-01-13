@@ -27,8 +27,8 @@ function ProductDetailHeader({ product, onLike }) {
             <div className={styles.productTags}>
               <p className={styles.tagTitle}>상품 태그</p>
               <ul className={styles.tags}>
-                {product.tags.map((tag) => (
-                  <li key={`tag-${tag}`}>#{tag}</li>
+                {product.tags.map((tag, i) => (
+                  <li key={`tag-${tag}-${i}`}>#{tag}</li>
                 ))}
               </ul>
             </div>
@@ -39,7 +39,7 @@ function ProductDetailHeader({ product, onLike }) {
               <img src={user} alt="user" />
               <div className={styles.userInfo}>
                 <p className={styles.userName}>{product.ownerNickname}</p>
-                <p className={styles.userDate}>
+                <p className={styles.userCreatedAt}>
                   {formatDate(product.createdAt)}
                 </p>
               </div>

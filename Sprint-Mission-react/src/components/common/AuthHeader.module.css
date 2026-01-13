@@ -1,0 +1,16 @@
+.loginLogo {
+  display: flex;
+  justify-content: center;
+}
+
+.pandaLogo {
+  width: 396px;
+  height: 132px;
+}
+
+@media (max-width: 767px) {
+  .pandaLogo {
+    width: 198px;
+    height: auto;
+  }
+}

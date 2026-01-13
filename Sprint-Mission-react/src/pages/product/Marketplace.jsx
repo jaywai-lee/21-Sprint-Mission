@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import ProductList from "../components/product/ProductList";
-import Pagination from "../components/layout/Pagination";
-import SearchBar from "../components/product/SearchBar";
-import SortFilter from "../components/product/SortFilter";
-import { fetchProducts, fetchBestProducts } from "../api/productAPI";
+import ProductList from "../../components/product/ProductList";
+import Pagination from "../../components/layout/Pagination";
+import SearchBar from "../../components/product/SearchBar";
+import SortFilter from "../../components/product/SortFilter";
+import { fetchProducts, fetchBestProducts } from "../../api/productAPI";
 import { useEffect, useState } from "react";
 import styles from "./Marketplace.module.css";
-import Nav from "../components/layout/Nav";
-import Button from "../components/common/Button";
+import Nav from "../../components/layout/Nav";
+import Button from "../../components/common/Button";
 
 function Marketplace() {
   const [products, setProducts] = useState([]);

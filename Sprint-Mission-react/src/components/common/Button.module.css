@@ -2,9 +2,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: none;
   border-radius: 8px;
-  cursor: pointer;
 }
 
 .primary {

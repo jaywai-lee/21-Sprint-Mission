@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Nav from "../components/layout/Nav";
+import Nav from "../../components/layout/Nav";
 import styles from "./AddItem.module.css";
-import ProductFormSection from "../components/product/ProductFormSection";
+import ProductFormSection from "../../components/product/ProductFormSection";
 
 function AddItem() {
   const [isActive, setIsActive] = useState(false);

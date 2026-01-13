@@ -40,3 +40,16 @@ body {
 html {
   overflow-x: hidden;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
