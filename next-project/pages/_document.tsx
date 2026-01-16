@@ -8,6 +8,7 @@ export default function Document() {
           href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
           rel="stylesheet"
         />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <body className="font-base">
         <Main />
