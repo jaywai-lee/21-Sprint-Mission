@@ -5,8 +5,16 @@ import TodoLayout from "@/components/layout/TodoLayout";
 
 export default function Home() {
   const [input, setInput] = useState("");
-  const { todos, dones, addTodo, toggleTodo, deleteTodo, leavingId, isAdding } =
-    useTodo();
+  const {
+    todos,
+    dones,
+    addTodo,
+    toggleTodo,
+    deleteTodo,
+    isLoading,
+    isAdding,
+    deletingIds,
+  } = useTodo();
 
   const handleAddClick = async () => {
     if (!input.trim() || isAdding) return;
@@ -35,7 +43,8 @@ export default function Home() {
         <TodoLayout
           todos={todos}
           dones={dones}
-          leavingId={leavingId}
+          isLoading={isLoading}
+          deletingIds={deletingIds}
           onToggle={toggleTodo}
           onDelete={deleteTodo}
         />

@@ -5,6 +5,7 @@ import nodone from "@/assets/images/nodone.png";
 import todo from "@/assets/images/todo.png";
 import done from "@/assets/images/done.png";
 import EmptyState from "../todo/EmptyState";
+import Spinner from "../common/Spinner";
 
 type Item = {
   id: number;
@@ -15,7 +16,8 @@ type Item = {
 type TodoLayoutProps = {
   todos: Item[];
   dones: Item[];
-  leavingId: number | null;
+  isLoading: boolean;
+  deletingIds: number[];
   onToggle: (item: Item) => void;
   onDelete: (id: number) => void;
 };
@@ -23,7 +25,8 @@ type TodoLayoutProps = {
 export default function TodoLayout({
   todos,
   dones,
-  leavingId,
+  isLoading,
+  deletingIds,
   onToggle,
   onDelete,
 }: TodoLayoutProps) {
@@ -34,7 +37,9 @@ export default function TodoLayout({
     <section className="grid grid-cols-2 gap-6">
       <div className="space-y-4">
         <Image src={todo} alt="todo" width={101} height={36} />
-        {hasTodo ? (
+        {isLoading ? (
+          <Spinner />
+        ) : hasTodo ? (
           <div className="space-y-3">
             {todos.map((item) => (
               <ChecklistItem
@@ -42,7 +47,7 @@ export default function TodoLayout({
                 id={item.id}
                 text={item.name}
                 isChecked={false}
-                isLeaving={leavingId === item.id}
+                isDeleting={deletingIds.includes(item.id)}
                 onToggle={() => onToggle(item)}
                 onDelete={() => onDelete(item.id)}
               />
@@ -59,7 +64,9 @@ export default function TodoLayout({
 
       <div className="space-y-4">
         <Image src={done} alt="done" width={97} height={36} />
-        {hasDone ? (
+        {isLoading ? (
+          <Spinner />
+        ) : hasDone ? (
           <div className="space-y-3">
             {dones.map((item) => (
               <ChecklistItem
@@ -67,7 +74,7 @@ export default function TodoLayout({
                 id={item.id}
                 text={item.name}
                 isChecked
-                isLeaving={leavingId === item.id}
+                isDeleting={deletingIds.includes(item.id)}
                 onToggle={() => onToggle(item)}
                 onDelete={() => onDelete(item.id)}
               />
