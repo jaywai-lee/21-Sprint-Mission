@@ -6,6 +6,7 @@ import TodoActionButtons from "@/components/todoDetail/TodoActionButtons";
 import ConfirmModal from "@/components/common/ConfirmModal";
 import { useTodoDetail } from "@/hooks/useTodoDetail";
 import { todoApi } from "@/lib/api/todoApi";
+import { GetServerSidePropsContext } from "next";
 
 type TodoDetail = {
   id: number;
@@ -19,8 +20,12 @@ type PageProps = {
   initialTodo: TodoDetail;
 };
 
-export async function getServerSideProps(context: any) {
-  const { id } = context.params;
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const { id } = context.params ?? {};
+
+  if (!id || Array.isArray(id)) {
+    return { notFound: true };
+  }
 
   try {
     const res = await todoApi.getItem(id);
@@ -70,10 +75,6 @@ export default function TodoDetailPage({ initialTodo }: PageProps) {
     await deleteTodo();
     router.push("/");
   };
-
-  if (!todo) {
-    return <div className="p-6">해당 Todo를 찾을 수 없습니다.</div>;
-  }
 
   return (
     <div className="mx-auto max-w-[1200px] space-y-10 p-8">
