@@ -9,6 +9,8 @@ export const todoApi = {
   toggleItem: (id: number, isCompleted: boolean) =>
     api.patch(`/${TENANT_ID}/items/${id}`, { isCompleted }),
   deleteItem: (id: number) => api.delete(`/${TENANT_ID}/items/${id}`),
-  updateItem: (id: number, payload: { memo?: string; imageUrl?: string }) =>
-    api.patch(`/${TENANT_ID}/items/${id}`, payload),
+  updateItem: (
+    id: number,
+    payload: { name?: string; memo?: string; imageUrl?: string }
+  ) => api.patch(`/${TENANT_ID}/items/${id}`, payload),
 };
